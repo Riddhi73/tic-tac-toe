@@ -1,3 +1,28 @@
-export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello TicTacToe</h1>;
+function Square({ value }) {
+  return (
+    <button className="bg-white border border-gray-400 h-12 w-12 m-1 leading-9 text-lg">
+      {value}
+    </button>
+  );
+}
+export default function Board() {
+  return (
+    <>
+      <div>
+        <Square value={1} />
+        <Square value={2} />
+        <Square />
+      </div>
+      <div>
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div>
+        <Square />
+        <Square />
+        <Square />
+      </div>
+    </>
+  );
 }
